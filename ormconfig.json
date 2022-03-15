@@ -5,8 +5,8 @@
   "username": "docker",
   "password": "ignite",
   "database": "rentx",
-  "migrations": ["**/migrations/*.ts"],
-  "entities": ["**/models/*.ts"],
+  "migrations": ["dist/**/migrations/*.ts"],
+  "entities": ["dist/**/models/*.ts"],
   "cli": {
     "migrationsDir": "./src/shared/infra/database/postgres/typeorm/migrations"
   }

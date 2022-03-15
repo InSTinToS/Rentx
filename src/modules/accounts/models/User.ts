@@ -1,13 +1,13 @@
 class User {
-  id: string
-  name: string
-  email: string
-  avatar: string
+  id = ''
+  name: ''
+  email: ''
+  avatar: ''
   isAdmin: boolean
-  password: string
+  password: ''
   created_at: Date
-  driver_license: string
-  avatar_url: () => string
+  driver_license: ''
+  avatar_url: () => ''
 }
 
 export { User }
