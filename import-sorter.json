@@ -1,0 +1,48 @@
+{
+  "generalConfiguration.sortOnBeforeSave": true,
+  "importStringConfiguration.tabSize": 2,
+  "importStringConfiguration.hasSemicolon": false,
+  "importStringConfiguration.numberOfEmptyLinesAfterAllImports": 1,
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80,
+  "importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importSorter.importStringConfiguration.trailingComma": "none",
+  "importSorter.importStringConfiguration.tabType": "space",
+  "sortConfiguration": {
+    "customOrderingRules": {
+      "rules": [
+        {
+          "type": "path | dotenv/config",
+          "regex": "^$",
+          "orderLevel": 0,
+          "disableSort": true
+        },
+        {
+          "regex": "^./|^../",
+          "orderLevel": 1,
+          "disableSort": true
+        },
+
+        {
+          "regex": "^@shared",
+          "orderLevel": 2,
+          "disableSort": true
+        },
+        {
+          "regex": "^@modules",
+          "orderLevel": 3,
+          "disableSort": true
+        },
+        {
+          "regex": "^@docs",
+          "orderLevel": 4,
+          "disableSort": true
+        },
+        {
+          "regex": "^@config",
+          "orderLevel": 5,
+          "disableSort": true
+        }
+      ]
+    }
+  }
+}
