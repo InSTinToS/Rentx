@@ -24,7 +24,7 @@ services:
     environment:
       - POSTGRES_DB=rentx
       - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=ignite
+      - POSTGRES_PASSWORD=my-postgres-password
       
   rentx-backend:
     build: .

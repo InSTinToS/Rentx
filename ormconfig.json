@@ -3,11 +3,11 @@
   "type": "postgres",
   "host": "localhost",
   "username": "docker",
-  "password": "ignite",
+  "password": "my-postgres-password",
   "database": "rentx",
-  "migrations": ["dist/**/migrations/*.ts"],
-  "entities": ["dist/**/models/*.ts"],
+  "migrations": ["dist/shared/infra/database/postgres/typeorm/migrations/*.js"],
+  "entities": ["dist/modules/**/infra/typeorm/models/*.js"],
   "cli": {
-    "migrationsDir": "./src/shared/infra/database/postgres/typeorm/migrations"
-  }
+    "migrationsDir": "./dist/shared/infra/database/postgres/typeorm/migrations"
+  }  
 }
