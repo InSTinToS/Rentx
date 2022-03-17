@@ -11,6 +11,8 @@ networks:
     driver: bridge
 
 services:
+
+
   rentx-database:
     image: postgres
     container_name: rentx-database
@@ -26,18 +28,24 @@ services:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=ignite
       
-  rentx-backend:
-    build: .
-    restart: always
-    container_name: rentx-backend
-    networks:
-      - "rentx-network"
+  # rentx-backend:
+  #   build: .
+  #   restart: always
+  #   container_name: rentx-backend
+  #   networks:
+  #     - "rentx-network"
+  #   ports: 
+  #     - 3333:3333
+  #     - 9229:9229
+  #   volumes: 
+  #     - ./src:/app/backend/src
+  #   links: 
+  #     - rentx-database
+  #   depends_on:
+  #     - rentx-database
+
+  redis: 
+    image: redis:alpine
     ports: 
-      - 3333:3333
-      - 9229:9229
-    volumes: 
-      - ./src:/app/backend/src
-    links: 
-      - rentx-database
-    depends_on:
-      - rentx-database
+      - 6379:6379
+

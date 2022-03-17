@@ -4,7 +4,7 @@ import { hash } from 'bcrypt'
 import { v4 } from 'uuid'
 
 async function create() {
-  const connection = await createDBConnection('localhost')
+  const connection = await createDBConnection()
 
   const password = await hash('admin', 8)
   const id = v4()

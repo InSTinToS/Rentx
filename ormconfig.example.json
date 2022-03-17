@@ -2,11 +2,11 @@
   "port": 5432,
   "type": "postgres",
   "host": "localhost",
-  "username": "",
-  "password": "",
+  "username": "same as dockercompose env",
+  "password": "same as dockercompose env",
   "database": "rentx",
-  "migrations": ["dist/**/migrations/*.ts"],
-  "entities": ["dist/**/models/*.ts"],
+  "migrations": ["**/migrations/*.ts"],
+  "entities": ["**/models/*.ts"],
   "cli": {
     "migrationsDir": "./src/shared/infra/database/postgres/typeorm/migrations"
   }

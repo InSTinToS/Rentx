@@ -74,3 +74,21 @@ POST -> '/sessions' req.body = { email, password }
 - 3: Prosseguir
 
 ---
+
+### ORMCONFIG para AWS
+
+```
+{
+  "port": 5432,
+  "type": "postgres",
+  "host": "localhost",
+  "username": "",
+  "password": "",
+  "database": "rentx",
+  "migrations": ["dist/shared/infra/database/postgres/typeorm/migrations/*.js"],
+  "entities": ["dist/modules/**/infra/typeorm/models/*.js"],
+  "cli": {
+    "migrationsDir": "./dist/shared/infra/database/postgres/typeorm/migrations"
+  }
+}
+```
